@@ -1139,3 +1139,13 @@ body.has-live-update .hero-open-badge { top: calc(84px + var(--strip-h)); }
 .eta-field input { position: absolute; opacity: 0; pointer-events: none; }
 .eta-field span { display: inline-block; padding: 9px 16px; border: 1.5px solid rgba(36,23,18,0.25); border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
 .eta-field input:checked + span { background: var(--red); border-color: var(--red); color: #fff; }
+
+/* ============================================
+   BUTCHERY + HOTEL (Bullhead Two)
+   ============================================ */
+.zones { padding: clamp(72px, 10vw, 128px) var(--edge); background: var(--rose); }
+.zones h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 14px; }
+.zones-sub { color: var(--ink-soft); max-width: 60ch; margin: 0 0 40px; font-size: 1.02rem; }
+.zones-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 700px) { .zones-grid.zones-two { grid-template-columns: repeat(2, 1fr); } }
+.zones-grid .explore-card img { object-fit: cover; }
