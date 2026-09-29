@@ -208,7 +208,7 @@
       <div class="row" id="tpls"></div>
 
       <label class="l" for="text">2 · Your message</label>
-      <textarea id="text" maxlength="140" placeholder="e.g. Fresh tilapia in today"></textarea>
+      <textarea id="text" maxlength="140" placeholder="e.g. Fresh chicken in today"></textarea>
       <div class="meta"><span>Short and clear works best</span><span id="charCount">0 / 140</span></div>
 
       <label class="l" for="textSw">Swahili version <span style="font-weight:400;color:var(--mute)">· shown when a visitor taps SW</span></label>
@@ -244,7 +244,7 @@
 
 <div class="bar" id="menuBar" hidden><div style="display:flex;gap:10px"><button class="btn ghost" id="mDiscard" type="button" style="flex:1">Discard</button><button class="btn" id="mReview" type="button" style="flex:2">Review &amp; save</button></div></div>
 <div class="modal" id="addModal" hidden><div class="sheet"><h2>Add a menu item</h2><p class="sub">It appears on the public menu after you review and save.</p>
-  <label class="l" for="aName">Item name</label><input type="text" id="aName" maxlength="60" placeholder="e.g. Fried tilapia">
+  <label class="l" for="aName">Item name</label><input type="text" id="aName" maxlength="60" placeholder="e.g. Pilau special">
   <label class="l" for="aCat">Category</label><select id="aCat" style="width:100%;padding:12px 14px;font:inherit;color:var(--cream);background:#1a110d;border:1px solid var(--line);border-radius:12px"></select>
   <input type="text" id="aNewCat" maxlength="40" placeholder="New category name" style="margin-top:8px" hidden>
   <label class="l" for="aPrice">Price in KES <span style="font-weight:400;color:var(--mute)">(optional — empty shows "Ask staff")</span></label><input type="text" id="aPrice" inputmode="numeric" placeholder="e.g. 250">
@@ -261,7 +261,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var KEY = 'bullheadAdminToken';
   var TEMPLATES = [
-    ['🐟 Fresh in', 'Fresh tilapia in today — come get it while it lasts', 'stock', 'Samaki tilapia wabichi wamefika leo — njoo uchukue kabla hawajaisha'],
+    ['🐟 Fresh in', 'Fresh chicken in today — come get it while it lasts', 'stock', 'Kuku wabichi wamefika leo — njoo uchukue kabla hawajaisha'],
     ['🔥 Special', "Today's special: ", 'special', 'Maalum ya leo: '],
     ['🕒 Late hours', 'Open all night — hot food ready anytime', 'notice', 'Tuko wazi usiku kucha — chakula moto wakati wowote'],
     ['🎉 Holiday', 'Happy holiday to all our esteemed customers — we are open 24 hours', 'notice', 'Heri ya sikukuu kwa wateja wetu wapendwa — tuko wazi masaa 24'],
