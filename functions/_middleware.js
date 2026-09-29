@@ -4,8 +4,7 @@
 // because the custom domain never matches this check.
 export async function onRequest(context) {
   const url = new URL(context.request.url);
-  if (url.hostname === '
-bullhead-branch2.pages.dev') {
+  if (url.hostname === 'bullhead-branch2.pages.dev') {
     url.protocol = 'https:';
     url.host = 'branch2.bullheadhotels.co.ke';
     return Response.redirect(url.toString(), 301);
