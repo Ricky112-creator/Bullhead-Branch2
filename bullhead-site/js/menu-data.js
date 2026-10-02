@@ -67,7 +67,7 @@ const MENU_ITEMS = [
   { id: 'goat-meat', category: 'Butchery — per kg', name: 'Goat meat', price: 900, unit: 'kg' },
   { id: 'matumbo', category: 'Butchery — per kg', name: 'Matumbo', price: 400, unit: 'kg' },
 
-  // Fish Specialty -- prices to confirm with client
+  // Fish Specialty 
   { id: 'tilapia-whole', category: 'Fish Specialty', name: 'Tilapia & ugali -- whole', price: 400 },
 
   // Sides & Extras
