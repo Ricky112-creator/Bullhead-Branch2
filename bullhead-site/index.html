@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=13">
+<link rel="stylesheet" href="css/style.css?v=14">
 <link rel="stylesheet" href="css/relay.css?v=2">
 <link rel="stylesheet" href="css/bh-motion.css?v=1">
 </head>
@@ -105,8 +105,12 @@
 
   <!-- CONDENSED STORY -->
   <section class="story">
-    <div class="story-media">
-      <img loading="lazy" src="assets/img/story-dining.webp" alt="Looking through the entrance into the Bullhead Two dining room, with diners at their tables" width="1400" height="1000">
+    <div class="story-media story-slides" role="group" aria-roledescription="carousel" aria-label="Bullhead Two in pictures">
+      <figure class="story-slide on"><img src="assets/img/story-dining.webp" alt="Looking through the entrance into the Bullhead Two dining room, with diners at their tables" width="1400" height="1000"><figcaption data-sw="Ndani ya ukumbi wa Bullhead Two">Inside the Bullhead Two dining room</figcaption></figure>
+      <figure class="story-slide"><img loading="lazy" src="assets/img/gallery-15-three-at-table.webp" alt="Three friends sharing a meal at a red table" width="1400" height="1166" class="pos-top"><figcaption data-sw="Kula pamoja kwenye meza nyekundu">Sharing a meal at the red tables</figcaption></figure>
+      <figure class="story-slide"><img loading="lazy" src="assets/img/gallery-18-takeaway.webp" alt="A cook pulling cling film over plates of ugali and stew on a green tray" width="1400" height="933"><figcaption data-sw="Kufunika sahani kabla haijapelekwa mezani">Covering a plate before it goes to the table</figcaption></figure>
+      <figure class="story-slide"><img loading="lazy" src="assets/img/gallery-07-window-seats.webp" alt="Guests at window tables beside the kitchen counter" width="1400" height="933"><figcaption data-sw="Viti vyenye mwanga kando ya kaunta ya jikoni">Bright seats beside the kitchen counter</figcaption></figure>
+      <figure class="story-slide"><img loading="lazy" src="assets/img/gallery-12-tables.webp" alt="A red table with the Bullhead Hotel emblem, between orange chairs" width="1400" height="933"><figcaption data-sw="Meza nyekundu zenye nembo ya Bullhead Hotel">Red-topped tables with the Bullhead Hotel emblem</figcaption></figure>
     </div>
     <div class="story-copy">
       <h2 data-sw="Mahali ambapo Bullhead inakukalisha.">Where Bullhead sits you down.</h2>
@@ -282,6 +286,7 @@
 <script src="js/main.js?v=13"></script>
 <script src="js/relay.js?v=2"></script>
 <script src="js/rightnow.js?v=1"></script>
+<script src="js/story-slides.js?v=1"></script>
 <script src="js/bh-motion.js?v=1"></script>
 <script>
 (function () {
