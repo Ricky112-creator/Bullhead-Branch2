@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gallery | Bullhead Hotel &amp; Butchery</title>
+<title>Gallery | Bullhead Two, Emali</title>
 <meta name="description" content="Photos from Bullhead Hotel &amp; Butchery, Emali. Open 24 hours on the Nairobi–Mombasa road.">
 <link rel="canonical" href="https://branch2.bullheadhotels.co.ke/gallery">
 <meta property="og:type" content="website">
@@ -23,31 +23,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="bhFontsReady(this)">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap"></noscript>
 <link rel="stylesheet" href="/css/style.css?v=13">
-<style>
-  .gal { max-width: 1100px; margin: 0 auto; padding: 130px 20px 70px; }
-  .gal-kicker { color: var(--cognac); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; margin: 0 0 8px; }
-  .gal h1 { font-family: var(--font-display); font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.1; margin: 0 0 8px; }
-  .gal-sub { color: var(--ink-soft); margin: 0 0 30px; max-width: 46ch; }
-  .gal-grid { columns: 3 260px; column-gap: 14px; }
-  .gal-grid figure { margin: 0 0 14px; break-inside: avoid; background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid var(--cream-deep); box-shadow: 0 8px 24px rgba(36, 23, 18, .07); cursor: zoom-in; transition: transform .2s ease; }
-  .gal-grid figure:hover { transform: translateY(-3px); }
-  .gal-grid img { width: 100%; display: block; }
-  .gal-grid figcaption { padding: 10px 14px 12px; font-size: .9rem; color: var(--ink-soft); }
-  .gal-empty { color: var(--ink-soft); padding: 40px 0; }
-  .lb { position: fixed; inset: 0; background: rgba(20, 12, 9, .92); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 200; cursor: zoom-out; flex-direction: column; gap: 12px; }
-  .lb.on { display: flex; }
-  .lb img { max-width: 100%; max-height: 82vh; border-radius: 12px; }
-  .lb p { color: #f6efe6; margin: 0; }
-  @media (prefers-reduced-motion: reduce) { .gal-grid figure { transition: none; } }
-  /* Sticky footer: page fills the screen, footer always sits at the very bottom */
-  html { height: 100%; }
-  body { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
-  .gal { flex: 1 0 auto; width: 100%; box-sizing: border-box; }
-  footer.visit { flex-shrink: 0; margin-top: auto; }
-</style>
+<link rel="stylesheet" href="/css/reel.css?v=1">
+<link rel="stylesheet" href="/css/stage.css?v=1">
 </head>
-<body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<body class="reel-page">
+<a class="skip-link" href="#reel">Skip to main content</a>
 <header class="site-nav" id="siteNav">
   <a href="/" class="nav-mark"><img src="/assets/img/logo-mark.png" alt="" class="nav-logo" width="254" height="223">Bullhead</a>
   <nav class="nav-links">
@@ -71,15 +51,28 @@
   <a href="/gallery" class="active" data-sw="Picha">Gallery</a>
 </div>
 
-<main class="gal" id="main-content">
-  <p class="gal-kicker" data-sw="Picha">Gallery</p>
-  <h1 data-sw="Maisha Bullhead">Life at Bullhead</h1>
-  <p class="gal-sub" data-sw="Bucha, ukumbi wa kulia na barabara nje. Hatufungi kamwe, kwa hivyo daima kuna kitu cha kuona.">The butchery, the dining room and the road outside. We never close, so there's always something to see.</p>
-  <div class="gal-grid" id="gg"><p class="gal-empty">Loading…</p></div>
+<main class="reel" id="reel">
+  <div class="reel-head">
+    <h1 data-sw="Maisha ya Bullhead Two">Life at Bullhead Two</h1>
+    <p data-sw="Telezesha, buruta au tumia mishale. Bonyeza picha ya katikati kuifungua kubwa.">Swipe, drag or use the arrow keys. Press the middle photo to open it full size.</p>
+  </div>
+  <ul class="reel-chips" id="reelChips" aria-label="Choose a part of Bullhead Two"></ul>
+  <div class="reel-stage" id="reelStage" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Bullhead Two in pictures"></div>
+  <div class="reel-bar">
+    <div class="reel-ticket" aria-live="polite">
+      <div class="no"><span id="tkNo">No. 01</span><span id="tkOf"></span></div>
+      <p class="cap" id="tkCap"></p>
+      <div class="no" style="margin:8px 0 0;color:var(--ink-soft)"><span id="tkCh"></span></div>
+    </div>
+    <div class="reel-ctl">
+      <button type="button" id="reelPrev" aria-label="Previous photo">&#8592;</button>
+      <button type="button" class="play" id="reelPlay" aria-pressed="false" aria-label="Play slideshow">&#9654;</button>
+      <button type="button" id="reelNext" aria-label="Next photo">&#8594;</button>
+      <button type="button" id="reelOpen" aria-label="Open full size">&#10530;</button>
+    </div>
+  </div>
+  <div class="reel-film" id="reelFilm" aria-label="All photos"></div>
 </main>
-
-<div class="lb" id="lb" aria-hidden="true"><img alt="" id="lbImg"><p id="lbCap"></p></div>
-
 <footer class="visit" style="padding-top:48px;">
   <div class="visit-footer" style="border-top:none; padding-top:0;">
     <span>Bullhead Butchery &amp; Hotel — Emali</span>
@@ -93,85 +86,10 @@
   </div>
   <p class="footer-legal">&copy; <span class="js-year">2026</span> Bullhead Butchery &amp; Hotel. All rights reserved.</p>
 </footer>
-
 <script src="/js/main.js?v=13"></script>
-<script>
-(function () {
-  var g = document.getElementById('gg'), lb = document.getElementById('lb');
-  var LOCAL = [
-    ['gallery-01-frontage.webp','The glass-fronted dining room under the green awning'],
-    ['gallery-02-building.webp','Bull Head Butchery & Hotel on the ground floor of its Emali block'],
-    ['gallery-03-signboard.webp','The Bull Head signboard, open 24/7'],
-    ['gallery-04-entrance.webp','Looking in from the entrance: a lit ceiling, a wash basin and diners at their tables'],
-    ['gallery-05-service.webp','A cook covering a plate of ugali and stew at the table'],
-    ['gallery-06-guests.webp','Lunch with friends beside the mirrored wall'],
-    ['gallery-07-window-seats.webp','Window seats on the main road'],
-    ['gallery-08-butchery.webp','The butchery counter, with fresh cuts hanging beside the scale'],
-    ['gallery-09-plate-ugali.webp','A staff member carrying a covered plate of ugali'],
-    ['gallery-10-drinks-fridge.webp','The BULLHEAD drinks fridge and a soda fridge just inside the door'],
-    ['gallery-11-dining.webp','Orange chairs, red tables and water jugs'],
-    ['gallery-12-tables.webp','Every table carries the Bullhead Hotel emblem'],
-    ['gallery-13-table-top.webp','A table top, close up'],
-    ['gallery-14-emblem.webp','The Bullhead Hotel emblem printed on each table'],
-    ['gallery-15-three-at-table.webp','Three friends at a table'],
-    ['gallery-16-jugs-mirrors.webp','Water jugs on every table, mirrors along the wall'],
-    ['gallery-17-wash-basin.webp','A wash basin in the dining room, so you can wash before you eat'],
-    ['gallery-18-takeaway.webp','Kitchen staff covering a plate of ugali and stew'],
-    ['gallery-19-water.webp','Bull Head Hotel drinking water in three sizes'],
-    ['gallery-20-lunch.webp','Lunch for three'],
-    ['gallery-21-storefront.webp','Bull Head Butchery & Hotel on the main road in Emali']
-  ];
-  function showLocal() {
-    g.innerHTML = '';
-    LOCAL.forEach(function (p) {
-      var src = '/assets/img/' + p[0], f = document.createElement('figure'), i = document.createElement('img'), c = document.createElement('figcaption');
-      i.loading = 'lazy'; i.decoding = 'async'; i.alt = p[1]; i.src = src; c.textContent = p[1]; f.appendChild(i); f.appendChild(c);
-      f.onclick = function () { document.getElementById('lbImg').src = src; document.getElementById('lbCap').textContent = p[1]; lb.classList.add('on'); };
-      g.appendChild(f);
-    });
-  }
-  fetch('/api/photos').then(function (r) { return r.json(); }).then(function (d) {
-    g.innerHTML = '';
-    if (!d.photos || !d.photos.length) { showLocal(); return; }
-    d.photos.forEach(function (p) {
-      var f = document.createElement('figure'), i = document.createElement('img');
-      var q = '/api/photos?img=' + p.id, v = '&v=' + (p.v || 0);
-      i.loading = 'lazy'; i.decoding = 'async'; i.alt = p.caption || 'Bullhead'; i.src = q + (p.t ? '&t=1' : '') + v; f.appendChild(i);
-      if (p.caption) { var c = document.createElement('figcaption'); c.textContent = p.caption; f.appendChild(c); }
-      f.onclick = function () { document.getElementById('lbImg').src = q + v; document.getElementById('lbCap').textContent = p.caption || ''; lb.classList.add('on'); };
-      g.appendChild(f);
-    });
-  }).catch(function () { showLocal(); });
-  lb.onclick = function () { lb.classList.remove('on'); };
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lb.classList.remove('on'); });
-})();
-</script>
-<script>
-(function () {
-  var STORAGE_KEY = 'bullheadLang';
-  var els = document.querySelectorAll('[data-sw]');
-  els.forEach(function (el) { el.dataset.en = el.innerHTML; });
-  var toggle = document.getElementById('langToggle');
-
-  function apply(lang) {
-    els.forEach(function (el) {
-      el.innerHTML = lang === 'sw' ? el.dataset.sw : el.dataset.en;
-    });
-    if (toggle) toggle.textContent = lang === 'sw' ? 'EN' : 'SW';
-  }
-
-  var saved = localStorage.getItem(STORAGE_KEY) || 'en';
-  apply(saved);
-
-  if (toggle) {
-    toggle.addEventListener('click', function () {
-      var current = localStorage.getItem(STORAGE_KEY) || 'en';
-      var next = current === 'en' ? 'sw' : 'en';
-      localStorage.setItem(STORAGE_KEY, next);
-      apply(next);
-    });
-  }
-})();
-</script>
+<script src="/js/reel-data.js?v=1"></script>
+<script src="/js/reel.js?v=1"></script>
+<script src="/js/stage.js?v=1"></script>
+<script src="/js/lang-toggle.js"></script>
 </body>
 </html>
