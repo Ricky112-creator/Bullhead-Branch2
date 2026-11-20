@@ -1,0 +1,27 @@
+/* Bullhead reel data: [id, chapter, width, height, average colour, caption]. Files: assets/img/reel/r-<id>[-s|-t].webp */
+window.BH_REEL = {"chapters": ["The block", "The room", "At the tables", "Counter and kitchen", "The details"], "items": [
+["01", 0, 5184, 3456, "#9d908c", "Bull Head Butchery & Hotel on the ground floor of its Emali block"],
+["02", 0, 5184, 3456, "#948f90", "The block seen from the road"],
+["03", 0, 5184, 3456, "#b89a97", "The Bull Head Butchery & Hotel sign above the green awning"],
+["04", 0, 5184, 3456, "#8c7b71", "The glass-fronted dining room under the green awning"],
+["05", 0, 5184, 3456, "#948985", "The frontage, HOTEL painted across the front"],
+["06", 1, 5184, 3456, "#a9808c", "Window seats looking onto the main road"],
+["07", 1, 5184, 3456, "#ad706c", "Just inside the door: the drinks fridges and the cashier's counter"],
+["08", 1, 5184, 3456, "#be74a1", "The dining room from the entrance, under the lit ceiling"],
+["09", 1, 5184, 3456, "#964988", "Orange chairs and red tables"],
+["10", 1, 5184, 3456, "#d47c60", "A table for four, orange chairs pulled in"],
+["11", 1, 5184, 3456, "#f1744e", "The Bullhead Hotel emblem on the tabletop"],
+["12", 1, 5184, 3456, "#bc616d", "A set table with the emblem at its centre"],
+["13", 1, 3456, 5184, "#b45c23", "The Bullhead Hotel emblem: a plate of the house meals"],
+["14", 2, 4151, 3456, "#9c6d78", "Three friends at lunch"],
+["15", 2, 5184, 3456, "#a16981", "Lunch with friends beside the mirrored wall"],
+["16", 2, 3456, 5184, "#a6799d", "Friends at their table"],
+["17", 2, 5184, 3456, "#985e87", "A guest at his table, plates and jugs beside him"],
+["18", 3, 5184, 3456, "#bb79af", "A cook setting a plate down at the table"],
+["19", 3, 5184, 3456, "#b472a3", "Serving a table"],
+["20", 3, 3456, 5184, "#6d5fb1", "A cook carrying a tray out to the tables"],
+["21", 3, 5184, 3456, "#9d5cac", "A cook at the wash basin, the dining room behind her"],
+["22", 3, 3456, 5184, "#c87d90", "The butchery counter, in its glass booth"],
+["23", 4, 3456, 3939, "#436198", "Bull Head Hotel water in three sizes"],
+["24", 4, 3456, 3769, "#3f6298", "The Bull Head Hotel water range"]
+]};
